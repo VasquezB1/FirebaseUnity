@@ -22,17 +22,13 @@ public class ActualizarPersona : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        IniciarDB();
-        actualizarPersona();
 
-    }
-
-    private void IniciarDB()
-    {
-        // Referencia a la basa de datos
         mDatabaseRef = FirebaseDatabase.DefaultInstance.RootReference;
+        ObtenerDatos();
+
     }
 
+  
     // Update is called once per frame
     void Update()
     {
@@ -40,9 +36,18 @@ public class ActualizarPersona : MonoBehaviour
     }
 
 
-    public void actualizarPersona()
+    public void ObtenerDatos()
     {
         ListarUsuarios();
+    }
+
+    public void actualizarDatos()
+    {
+        var usuarioID = mDatabaseRef.Child("Usuarios").Child(userID.text).Child("userID").GetValueAsync();
+        // yield return new WaitUntil(predicate: () => usuarioID.IsCompleted);
+        Usuario user = new Usuario(userID.text,nombrePersona.text, apellidoPersona.text, telefonoPersona.text, emailPersona.text);
+        string json = JsonUtility.ToJson(user);
+        mDatabaseRef.Child("Usuarios").Child(userID.text).SetRawJsonValueAsync(json);
     }
 
 

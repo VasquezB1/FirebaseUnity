@@ -25,8 +25,6 @@ public class DBManager : MonoBehaviour
 
     [SerializeField]
     public Text mensajeExito;
-
-
     private bool activarMensaje;
     //private string userID;
     // Start is called before the first frame update
@@ -34,6 +32,7 @@ public class DBManager : MonoBehaviour
     {
         // userID = SystemInfo.deviceUniqueIdentifier;
         IniciarDB();
+        mDatabaseRef.KeepSynced(true);
         CrearUsuario();
         ListarUsuarios();
 
@@ -45,6 +44,7 @@ public class DBManager : MonoBehaviour
     {
         // Referencia a la basa de datos
         mDatabaseRef = FirebaseDatabase.DefaultInstance.RootReference;
+        
     }
 
     //Metodo para creacion de Usuarios
