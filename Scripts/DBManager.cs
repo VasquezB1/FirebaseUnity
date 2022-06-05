@@ -1,4 +1,5 @@
-﻿using Firebase;
+﻿//Librerias Necesarias
+using Firebase;
 using Firebase.Database;
 using System;
 using System.Collections;
@@ -38,12 +39,14 @@ public class DBManager : MonoBehaviour
         mensajeExito.gameObject.SetActive(false);
     }
 
+    //Iniciamos nuestra base de datos
     private void IniciarDB()
     {
         // Referencia a la basa de datos
         mDatabaseRef = FirebaseDatabase.DefaultInstance.RootReference;
     }
 
+    //Metodo para creacion de Usuarios
     public void CrearUsuario()
     {
         Usuario user = new Usuario(nombre.text, apellido.text, telefono.text, email.text);
@@ -53,8 +56,7 @@ public class DBManager : MonoBehaviour
        
     }
 
-
-
+    //Metodo que permite mostrar mensajes de exito
     public void MostrarMensajeExito()
     {
         activarMensaje = true;
@@ -75,6 +77,7 @@ public class DBManager : MonoBehaviour
             
     }
 
+    //Metodo para limpiar datos
     public void LimpiarDatos()
     {
         nombre.text = "";
@@ -83,14 +86,14 @@ public class DBManager : MonoBehaviour
         email.text = "";
     }
 
-
+    //Metodo para limpiar mensajes en pantalla
     private void LimpiarMensaje()
     {
         activarMensaje = false;
         mensajeExito.gameObject.SetActive(false);
     }
 
-  
+    //obtenemos los datos de la base de datos
 
     public IEnumerator GetNombre(Action<string> onCallBack)
     {
@@ -155,8 +158,6 @@ public class DBManager : MonoBehaviour
         }
 
     }
-
-
 
     public void ListarUsuarios()
     {
