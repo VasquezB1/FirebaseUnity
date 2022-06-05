@@ -3,6 +3,9 @@
 public class Usuario
 {
     //Parametros que usaremos
+
+    public string userID;
+
     public string nombre;
     public string apellido;
     public string telefono;
@@ -13,8 +16,9 @@ public class Usuario
     {
     }
 
-    public Usuario(string nombre, string apellido, string telefono, string email)
+    public Usuario(string userID, string nombre, string apellido, string telefono, string email)
     {
+        this.userID = userID;
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
