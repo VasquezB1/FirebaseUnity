@@ -1,18 +1,24 @@
-﻿public class Usuario
+﻿//Declaramos la Clase Usuario la cual sera una de nuestras primeras clases
+
+public class Usuario
 {
-    //public string cedula;
+    //Parametros que usaremos
+
+    public string userID;
+
     public string nombre;
     public string apellido;
     public string telefono;
     public string email;
 
+    //Constructor de nuestra clase
     public Usuario()
     {
     }
 
-    public Usuario(string nombre, string apellido, string telefono, string email)
+    public Usuario(string userID, string nombre, string apellido, string telefono, string email)
     {
-       // this.cedula = cedula;
+        this.userID = userID;
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
