@@ -274,6 +274,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101425828}
   m_CullTransparentMesh: 0
+--- !u!1 &234604428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 234604430}
+  - component: {fileID: 234604429}
+  m_Layer: 0
+  m_Name: CrearUsuario
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &234604429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234604428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250cf3a6094297242a227dbc3e6fe808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userID: {fileID: 1999600567}
+  nombre: {fileID: 1109101326}
+  apellido: {fileID: 1586349786}
+  telefono: {fileID: 1988650597}
+  email: {fileID: 2032051014}
+  usuarioIDListado: {fileID: 1142801974}
+  nombreListado: {fileID: 1741579399}
+  apellidoListado: {fileID: 1018880106}
+  telefonoListado: {fileID: 266217183}
+  emailListado: {fileID: 101425830}
+  mensajeExito: {fileID: 838015915}
+--- !u!4 &234604430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234604428}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 473.36813, y: 180.57857, z: -438.74237}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &266217181
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,8 +693,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1953966991}
-        m_MethodName: CrearUsuario
+      - m_Target: {fileID: 234604429}
+        m_MethodName: agregarUsuario
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -876,7 +930,7 @@ RectTransform:
   - {fileID: 1142801973}
   - {fileID: 328698189}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1028,7 +1082,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Listado Usuarios
+  m_Text: Autores Datos
 --- !u!222 &942898016
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1259,9 +1313,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Datos Del Usuario
-
-'
+  m_Text: Datos Del Auor
 --- !u!222 &1084813955
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1496,6 +1548,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1157964043}
   - component: {fileID: 1157964042}
+  - component: {fileID: 1157964044}
   m_Layer: 0
   m_Name: CambioEscena
   m_TagString: Untagged
@@ -1529,8 +1582,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1157964044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157964041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8489a59af5576f4c91a8f3a493688e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1272384251
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,7 +1737,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1382214246
 GameObject:
@@ -2114,7 +2179,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Formulario Usuarios
+  m_Text: Formulario Autores
 --- !u!222 &1692494963
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2359,7 +2424,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1953966991}
+      - m_Target: {fileID: 234604429}
         m_MethodName: ListarUsuarios
         m_Mode: 1
         m_Arguments:
@@ -2551,7 +2616,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Actualizar Datos
+  m_Text: Regresar
 --- !u!222 &1854531933
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2560,60 +2625,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854531930}
   m_CullTransparentMesh: 0
---- !u!1 &1953966990
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1953966992}
-  - component: {fileID: 1953966991}
-  m_Layer: 0
-  m_Name: FirebaseManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1953966991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953966990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8489a59af5576f4c91a8f3a493688e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  userID: {fileID: 1999600567}
-  nombre: {fileID: 1109101326}
-  apellido: {fileID: 1586349786}
-  telefono: {fileID: 1988650597}
-  email: {fileID: 2032051014}
-  usuarioIDListado: {fileID: 1142801974}
-  nombreListado: {fileID: 1741579399}
-  apellidoListado: {fileID: 1018880106}
-  telefonoListado: {fileID: 266217183}
-  emailListado: {fileID: 101425830}
-  mensajeExito: {fileID: 838015915}
---- !u!4 &1953966992
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953966990}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1988650595
 GameObject:
   m_ObjectHideFlags: 0
@@ -3099,7 +3110,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Guardar Usuario
+  m_Text: Guardar Autor
 --- !u!222 &2069023563
 CanvasRenderer:
   m_ObjectHideFlags: 0
