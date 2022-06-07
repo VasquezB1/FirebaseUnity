@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Escenas/Clases.unity
+    guid: 46f6541fabc58164b9fedf3d1c6536cc
+  - enabled: 1
+    path: Assets/Escenas/CRUDAutores.unity
+    guid: 1333e66cf27709f4cae792e3c9fd3e26
+  - enabled: 1
+    path: Assets/Escenas/Principal.unity
+    guid: 471ed9b2034924e449c3acaaefd4739e
+  - enabled: 1
+    path: Assets/Escenas/ActualizarPersona.unity
+    guid: 746ebca11495bf940a7a8e4319701f17
   m_configObjects: {}
