@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/ActualizarAutor.unity
     guid: 746ebca11495bf940a7a8e4319701f17
+  - enabled: 1
+    path: Assets/Escenas/EliminarAutor.unity
+    guid: 384c0514bbb88e845b08ca23bb4e66e3
   m_configObjects: {}
