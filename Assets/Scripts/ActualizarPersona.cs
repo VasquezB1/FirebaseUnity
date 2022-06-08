@@ -17,7 +17,9 @@ public class ActualizarPersona : MonoBehaviour
 
     DatabaseReference mDatabaseRef;
 
-
+    [SerializeField]
+    public Text mensajeExito;
+    private bool activarMensaje;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,7 @@ public class ActualizarPersona : MonoBehaviour
 
         mDatabaseRef = FirebaseDatabase.DefaultInstance.RootReference;
         ObtenerDatos();
+        mensajeExito.gameObject.SetActive(false);
 
     }
 
@@ -48,7 +51,46 @@ public class ActualizarPersona : MonoBehaviour
         Usuario user = new Usuario(userID.text,nombrePersona.text, apellidoPersona.text, telefonoPersona.text, emailPersona.text);
         string json = JsonUtility.ToJson(user);
         mDatabaseRef.Child("Usuarios").Child(userID.text).SetRawJsonValueAsync(json);
+        MostrarMensajeExito();
     }
+
+    public void MostrarMensajeExito()
+    {
+        activarMensaje = true;
+        mensajeExito.text = "Se actualizo los datos";
+        mensajeExito.gameObject.SetActive(true);
+    }
+
+    private void OnGUI()
+    {
+        if (activarMensaje)
+        {
+            if (Input.anyKeyDown)
+            {
+                LimpiarMensaje();
+                LimpiarDatos();
+            }
+        }
+
+    }
+
+    public void LimpiarDatos()
+    {
+        nombrePersona.text = "";
+        apellidoPersona.text = "";
+        telefonoPersona.text = "";
+        emailPersona.text = "";
+    }
+
+
+    private void LimpiarMensaje()
+    {
+        activarMensaje = false;
+        mensajeExito.gameObject.SetActive(false);
+    }
+
+    //Metodo para limpiar datos
+  
 
 
     public IEnumerator GetNombre(Action<string> onCallBack)

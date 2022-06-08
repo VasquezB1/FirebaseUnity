@@ -63,7 +63,7 @@ public class CrearUsuario : MonoBehaviour
     public void MostrarMensajeExito()
     {
         activarMensaje = true;
-        mensajeExito.text = "Su usuario fue creado con exito";
+        mensajeExito.text = "Su lector fue creado con exito";
         mensajeExito.gameObject.SetActive(true);
     }
 

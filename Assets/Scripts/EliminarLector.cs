@@ -17,6 +17,9 @@ public class EliminarLector : MonoBehaviour
 
     DatabaseReference mDatabaseRef;
 
+    [SerializeField]
+    public Text mensajeExito;
+    private bool activarMensaje;
 
 
     // Start is called before the first frame update
@@ -26,6 +29,44 @@ public class EliminarLector : MonoBehaviour
         mDatabaseRef = FirebaseDatabase.DefaultInstance.RootReference;
         ObtenerDatos();
 
+        mensajeExito.gameObject.SetActive(false);
+
+    }
+
+    public void MostrarMensajeExito()
+    {
+        activarMensaje = true;
+        mensajeExito.text = "El lector fue eliminado correctamente";
+        mensajeExito.gameObject.SetActive(true);
+    }
+
+    private void OnGUI()
+    {
+        if (activarMensaje)
+        {
+            if (Input.anyKeyDown)
+            {
+                LimpiarMensaje();
+                LimpiarDatos();
+            }
+        }
+
+    }
+
+    //Metodo para limpiar datos
+    public void LimpiarDatos()
+    {
+        nombrePersona.text = "";
+        apellidoPersona.text = "";
+        telefonoPersona.text = "";
+        emailPersona.text = "";
+    }
+
+    //Metodo para limpiar mensajes en pantalla
+    private void LimpiarMensaje()
+    {
+        activarMensaje = false;
+        mensajeExito.gameObject.SetActive(false);
     }
 
 
@@ -48,6 +89,7 @@ public class EliminarLector : MonoBehaviour
         Usuario user = new Usuario(userID.text, " ", " ", " ", " ");
         string json = JsonUtility.ToJson(user);
         mDatabaseRef.Child("Usuarios").Child(userID.text).SetRawJsonValueAsync(json);
+        MostrarMensajeExito();
     }
 
 
