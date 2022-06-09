@@ -41,34 +41,6 @@ public class CrearLibro : MonoBehaviour
 
     }
 
-    public IEnumerator GetID(Action<string> onCallBack)
-    {
-        var usuarioID = mDatabaseRef.Child("Usuarios").Child(codigoAutor.text).Child("userID").GetValueAsync();
-        yield return new WaitUntil(predicate: () => usuarioID.IsCompleted);
-
-
-        if (usuarioID != null)
-        {
-            DataSnapshot datos = usuarioID.Result;
-            onCallBack.Invoke(datos.Value.ToString());
-            
-        }
-    }
-
-    public IEnumerator GetNombre(Action<string> onCallBack)
-    {
-        var userNombre = mDatabaseRef.Child("Usuarios").Child(codigoAutor.text).Child("nombre").GetValueAsync();
-        yield return new WaitUntil(predicate: () => userNombre.IsCompleted);
-
-        if (userNombre != null)
-        {
-
-            DataSnapshot datos = userNombre.Result;
-            onCallBack.Invoke(datos.Value.ToString());
-            
-        }
-
-    }
 
     public void MostrarMensajeError()
     {
@@ -84,6 +56,33 @@ public class CrearLibro : MonoBehaviour
         exito.gameObject.SetActive(true);
     }
 
+    public IEnumerator GetID(Action<string> onCallBack)
+    {
+        var usuarioID = mDatabaseRef.Child("Usuarios").Child(codigoAutor.text).Child("userID").GetValueAsync();
+        yield return new WaitUntil(predicate: () => usuarioID.IsCompleted);
+
+
+        if (usuarioID != null)
+        {
+            DataSnapshot datos = usuarioID.Result;
+            onCallBack.Invoke(datos.Value.ToString());
+
+        }
+    }
+
+    public IEnumerator GetNombreAutor(Action<string> onCallBack)
+    {
+        var userNombre = mDatabaseRef.Child("Usuarios").Child(codigoAutor.text).Child("nombre").GetValueAsync();
+        yield return new WaitUntil(predicate: () => userNombre.IsCompleted);
+
+        if (userNombre != null)
+        {
+            DataSnapshot datos = userNombre.Result;
+            onCallBack.Invoke(datos.Value.ToString());
+
+        }
+
+    }
     public void ListarUsuarios()
     {
         //MostrarMensajeError();
@@ -94,7 +93,7 @@ public class CrearLibro : MonoBehaviour
             codigoAutor_Invisible.text = autorID;
         }));
 
-        StartCoroutine(GetNombre((string nombre) =>
+        StartCoroutine(GetNombreAutor((string nombre) =>
         {
             nombre_autor_visible.ToString();
             nombre_autor_visible.text = nombre;
@@ -123,6 +122,7 @@ public class CrearLibro : MonoBehaviour
         fecha_publicacion.text = "";
         numeropaginas.text = "";
         codigoAutor.text = "";
+        nombre_autor_visible.text = "";
     }
 
     private void LimpiarMensaje()
@@ -135,9 +135,9 @@ public class CrearLibro : MonoBehaviour
     public void CrearLibros()
     {
 
-        if(codigoAutor_Invisible.text == codigoAutor.text)
+        if(codigoAutor.text == codigoAutor.text)
         {
-            Libros libro = new Libros(libroID.text, nombreLibro.text, editorialLibro.text, fecha_publicacion.text, numeropaginas.text, codigoAutor_Invisible.text);
+            Libros libro = new Libros(libroID.text, nombreLibro.text, editorialLibro.text, fecha_publicacion.text, numeropaginas.text, codigoAutor.text);
             //Usuario user = new Usuario("1", "Juan", "Carlos", "0978563423", "juan@gmail.com");
             string json = JsonUtility.ToJson(libro);
             mDatabaseRef.Child("Libros").Child(libroID.text).SetRawJsonValueAsync(json);
@@ -251,12 +251,6 @@ public class CrearLibro : MonoBehaviour
         {
             codigoAutor.ToString();
             codigoAutor.text = autorcod;
-        }));
-
-        StartCoroutine(GetNombre((string nombre) =>
-        {
-            nombreAutorListar.ToString();
-            nombreAutorListar.text = nombre;
         }));
 
     }

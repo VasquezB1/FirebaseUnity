@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ActualizarLibro.cs" />
     <Compile Include="Assets\Scripts\ActualizarPersona.cs" />
+    <Compile Include="Assets\Scripts\BuscarAutor.cs" />
     <Compile Include="Assets\Scripts\CambioEscena.cs" />
     <Compile Include="Assets\Scripts\CrearLibro.cs" />
     <Compile Include="Assets\Scripts\CrearPrestamo.cs" />
@@ -74,8 +75,11 @@
     <Compile Include="Assets\Scripts\EliminarLector.cs" />
     <Compile Include="Assets\Scripts\EliminarLibro.cs" />
     <Compile Include="Assets\Scripts\Libros.cs" />
+    <Compile Include="Assets\Scripts\ListaAutor.cs" />
     <Compile Include="Assets\Scripts\ListarLector.cs" />
     <Compile Include="Assets\Scripts\ListarLibro.cs" />
+    <Compile Include="Assets\Scripts\ListarLibrosPrestamo.cs" />
+    <Compile Include="Assets\Scripts\ListarPrestamo.cs" />
     <Compile Include="Assets\Scripts\Prestamo.cs" />
     <Compile Include="Assets\Scripts\Usuario.cs" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />

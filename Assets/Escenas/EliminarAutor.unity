@@ -1183,7 +1183,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ingrese cedula del lector
+  m_Text: Ingrese ID del lector
 --- !u!222 &1154301422
 CanvasRenderer:
   m_ObjectHideFlags: 0

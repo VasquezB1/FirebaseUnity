@@ -17,7 +17,7 @@ public class ActualizarLibro : MonoBehaviour
 
     DatabaseReference mDatabaseRef;
 
-    public InputField codigoAutorinvisible;
+    public Text codigoAutorinvisible;
 
     [SerializeField]
     public Text mensajeExito;
@@ -76,6 +76,7 @@ public class ActualizarLibro : MonoBehaviour
         fechaPublicacion.text = "";
         numeroPaginas.text = "";
         autorNombre.text = "";
+        codigoAutorinvisible.text = "";
     }
 
 

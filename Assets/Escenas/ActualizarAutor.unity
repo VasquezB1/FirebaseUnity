@@ -2306,7 +2306,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ingrese la cedula a buscar
+  m_Text: Ingrese ID a buscar
 --- !u!222 &1613917959
 CanvasRenderer:
   m_ObjectHideFlags: 0
