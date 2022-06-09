@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/ActualizarLibro.unity
     guid: b71fbc0790258314dbfea0aba16f3042
+  - enabled: 1
+    path: Assets/Escenas/EliminarLibro.unity
+    guid: dfc59930bb0d2aa4eb852c4d7a6dab55
   m_configObjects: {}

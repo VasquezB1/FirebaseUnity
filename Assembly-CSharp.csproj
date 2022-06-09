@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\CrearUsuario.cs" />
     <Compile Include="Assets\Scripts\DBManager.cs" />
     <Compile Include="Assets\Scripts\EliminarLector.cs" />
+    <Compile Include="Assets\Scripts\EliminarLibro.cs" />
     <Compile Include="Assets\Scripts\Libros.cs" />
     <Compile Include="Assets\Scripts\ListarLector.cs" />
     <Compile Include="Assets\Scripts\Usuario.cs" />

@@ -44,18 +44,9 @@ public class CrearUsuario : MonoBehaviour
     
     public void agregarUsuario()
     {
-       /* Usuario user = new Usuario();
-
-        user.nombre = nombre.text;
-        user.apellido = apellido.text;*/
- 
-        //var usuarioID = mDatabaseRef.Child("Usuarios").Child(userID.text).Child("userID").GetValueAsync();
-        // yield return new WaitUntil(predicate: () => usuarioID.IsCompleted);
-        Usuario user = new Usuario(userID.text, nombre.text, apellido.text, telefono.text, email.text);
-        //Usuario user = new Usuario("1", "Juan", "Carlos", "0978563423", "juan@gmail.com");
+        Usuario user = new Usuario(userID.text, nombre.text, apellido.text, telefono.text, email.text);       
         string json = JsonUtility.ToJson(user);
-        mDatabaseRef.Child("Usuarios").Child(userID.text).SetRawJsonValueAsync(json);
-        //mDatabaseRef.Push();
+        mDatabaseRef.Child("Usuarios").Child(userID.text).SetRawJsonValueAsync(json);        
         MostrarMensajeExito();
     }
 
