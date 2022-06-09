@@ -13,12 +13,50 @@ public class EliminarPrestamo : MonoBehaviour
     public Text cedula_prestamista;
 
     DatabaseReference mDatabaseRef;
-
+    [SerializeField]
+    public Text mensajeExito;
+    private bool activarMensaje;
 
     // Start is called before the first frame update
     void Start()
     {
         mDatabaseRef = FirebaseDatabase.DefaultInstance.RootReference;
+        mensajeExito.gameObject.SetActive(false);
+    }
+
+    public void MostrarMensajeExito()
+    {
+        activarMensaje = true;
+        mensajeExito.text = "El prestamo fue eliminado correctamente";
+        mensajeExito.gameObject.SetActive(true);
+    }
+
+    private void OnGUI()
+    {
+        if (activarMensaje)
+        {
+            if (Input.anyKeyDown)
+            {
+                LimpiarMensaje();
+                LimpiarDatos();
+            }
+        }
+
+    }
+
+    //Metodo para limpiar datos
+    public void LimpiarDatos()
+    {
+        codigoPrestamo.text = "";
+        numero_prestamo.text = "";
+        fecha_prestamo.text = "";
+        cedula_prestamista.text = "";
+    }
+
+    private void LimpiarMensaje()
+    {
+        activarMensaje = false;
+        mensajeExito.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -100,6 +138,6 @@ public class EliminarPrestamo : MonoBehaviour
         Prestamo prestamo = new Prestamo(codigoPrestamo.text, "", "", "", "");
         string json = JsonUtility.ToJson(prestamo);
         mDatabaseRef.Child("Prestamos").Child(codigoPrestamo.text).SetRawJsonValueAsync(json);
-       // MostrarMensajeExito();
+        MostrarMensajeExito();
     }
 }

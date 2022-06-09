@@ -44,4 +44,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/EliminarPrestamo.unity
     guid: a221375f7309a5a41886113cfea1519f
+  - enabled: 1
+    path: Assets/Escenas/ListarUsuarios.unity
+    guid: 0bdd96430fe72df4c87c7c26ffcb2e7d
+  - enabled: 1
+    path: Assets/Escenas/ListarLibros.unity
+    guid: 58b9965607bcd5f42b7fde8670819940
+  - enabled: 1
+    path: Assets/Escenas/ListarPrestamos.unity
+    guid: 2db42f2b6d7537b4a8a3cc8486f053a3
   m_configObjects: {}

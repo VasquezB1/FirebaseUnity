@@ -1,12 +1,12 @@
 ﻿using Firebase.Database;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ListarPersonas : MonoBehaviour
+public class DatosLibros : MonoBehaviour
 {
+
     public Text nombres;
     //public Text nombres;
 
@@ -14,13 +14,11 @@ public class ListarPersonas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         mDatabaseRef = FirebaseDatabase.DefaultInstance.RootReference;
         ListarInfor();
-       // FirebaseDatabase.DefaultInstance.GetReference("Usuarios").ValueChanged += HandleValueChanged;
-        //ListarLibros();
-
     }
+
+    // Update is called once per frame
     void Update()
     {
         ListarInfor();
@@ -28,7 +26,7 @@ public class ListarPersonas : MonoBehaviour
 
     public void ListarInfor()
     {
-        mDatabaseRef.Child("Usuarios").OrderByChild("userID").GetValueAsync().ContinueWith(task =>
+        mDatabaseRef.Child("Libros").OrderByChild("libroID").GetValueAsync().ContinueWith(task =>
         {
             if (task.IsFaulted)
             {
@@ -38,13 +36,11 @@ public class ListarPersonas : MonoBehaviour
             {
                 DataSnapshot snapshot = task.Result;
 
-               // Debug.Log(snapshot.GetRawJsonValue());
+                // Debug.Log(snapshot.GetRawJsonValue());
                 nombres.text = snapshot.GetRawJsonValue();
             }
         });
 
 
     }
-
-   
 }

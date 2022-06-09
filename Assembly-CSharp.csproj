@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\CrearLibro.cs" />
     <Compile Include="Assets\Scripts\CrearPrestamo.cs" />
     <Compile Include="Assets\Scripts\CrearUsuario.cs" />
+    <Compile Include="Assets\Scripts\DatosLibros.cs" />
     <Compile Include="Assets\Scripts\DBManager.cs" />
     <Compile Include="Assets\Scripts\EliminarLector.cs" />
     <Compile Include="Assets\Scripts\EliminarLibro.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\Scripts\ListarLibro.cs" />
     <Compile Include="Assets\Scripts\ListarLibrosPrestamo.cs" />
     <Compile Include="Assets\Scripts\ListarPersonas.cs" />
+    <Compile Include="Assets\Scripts\ListarPres.cs" />
     <Compile Include="Assets\Scripts\ListarPrestamo.cs" />
     <Compile Include="Assets\Scripts\Prestamo.cs" />
     <Compile Include="Assets\Scripts\Usuario.cs" />
