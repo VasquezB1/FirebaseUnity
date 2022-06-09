@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/EliminarAutor.unity
     guid: 384c0514bbb88e845b08ca23bb4e66e3
+  - enabled: 1
+    path: Assets/Escenas/CRUD Libros.unity
+    guid: e60d94159995d4f418382f33164dd250
+  - enabled: 1
+    path: Assets/Escenas/CrearLibro.unity
+    guid: 00afe64a07751ce45a2c7822767f4eb1
+  - enabled: 1
+    path: Assets/Escenas/ActualizarLibro.unity
+    guid: b71fbc0790258314dbfea0aba16f3042
   m_configObjects: {}
