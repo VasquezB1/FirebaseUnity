@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/EliminarLibro.unity
     guid: dfc59930bb0d2aa4eb852c4d7a6dab55
+  - enabled: 1
+    path: Assets/Escenas/CRUDPrestamos.unity
+    guid: 42e5c1c3c51cc294593043885107af80
+  - enabled: 1
+    path: Assets/Escenas/CrearPrestamos.unity
+    guid: 19b76c0e1713c5745a3884b68c323163
   m_configObjects: {}

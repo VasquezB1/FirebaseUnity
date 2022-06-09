@@ -157,7 +157,7 @@ MonoBehaviour:
   codigoAutor: {fileID: 1281185902}
   codigoAutor_Invisible: {fileID: 1970154277}
   nombre_autor_visible: {fileID: 1568534788}
-  nombreAutorListar: {fileID: 0}
+  nombreAutorListar: {fileID: 1568534788}
   error: {fileID: 523697823}
   exito: {fileID: 505027089}
 --- !u!4 &162366806
@@ -2988,7 +2988,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1970154277
 MonoBehaviour:
   m_ObjectHideFlags: 0
