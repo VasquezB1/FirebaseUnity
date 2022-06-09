@@ -74,11 +74,13 @@
     <Compile Include="Assets\Scripts\DBManager.cs" />
     <Compile Include="Assets\Scripts\EliminarLector.cs" />
     <Compile Include="Assets\Scripts\EliminarLibro.cs" />
+    <Compile Include="Assets\Scripts\EliminarPrestamo.cs" />
     <Compile Include="Assets\Scripts\Libros.cs" />
     <Compile Include="Assets\Scripts\ListaAutor.cs" />
     <Compile Include="Assets\Scripts\ListarLector.cs" />
     <Compile Include="Assets\Scripts\ListarLibro.cs" />
     <Compile Include="Assets\Scripts\ListarLibrosPrestamo.cs" />
+    <Compile Include="Assets\Scripts\ListarPersonas.cs" />
     <Compile Include="Assets\Scripts\ListarPrestamo.cs" />
     <Compile Include="Assets\Scripts\Prestamo.cs" />
     <Compile Include="Assets\Scripts\Usuario.cs" />

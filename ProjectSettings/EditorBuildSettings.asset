@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/ActualizarPrestamo.unity
     guid: 1495c40ca82db0c4eb1de4a4e2df45ee
+  - enabled: 1
+    path: Assets/Escenas/EliminarPrestamo.unity
+    guid: a221375f7309a5a41886113cfea1519f
   m_configObjects: {}
